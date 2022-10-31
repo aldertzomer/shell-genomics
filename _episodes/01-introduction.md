@@ -58,40 +58,18 @@ We will also be using several bioinformatic packages in later lessons and instal
 
 ## How to access the remote server
 
-You can log-in to the remote server using the instructions 
-[here](http://www.datacarpentry.org/cloud-genomics/02-logging-onto-cloud/#logging-onto-a-cloud-instance). 
-Your instructor will supply to you the `ip_address` and password that you need to login.
+You can log-in to the remote server using your webbrowser
+[here](https://cocalc4.science.uu.nl/). 
+Your instructor will supply to you the username and password that you need to login.
 
-Each of you will have a different `ip_address`. This will 
+Each of you will have a different username and password. This will 
 prevent us from accidentally changing each other's files as we work through the
-exercises. The password will be the same for everyone. 
+exercises. 
 
-After logging in, you will see a screen showing something like this: 
+After logging in and navigating to your project and clicking on "New", "terminal", you will see a screen showing something like this: 
 
-~~~
-Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-48-generic x86_64)
+![image](https://user-images.githubusercontent.com/10392411/199006892-1f4bcbe9-643c-48bd-b251-df263a8ce753.png)
 
- * Documentation:  https://help.ubuntu.com/
-
-  System information as of Sat Feb  2 00:08:17 UTC 2019
-
-  System load: 0.0                Memory usage: 5%   Processes:       82
-  Usage of /:  29.9% of 98.30GB   Swap usage:   0%   Users logged in: 0
-
-  Graph this data and manage this system at:
-    https://landscape.canonical.com/
-
-  Get cloud support with Ubuntu Advantage Cloud Guest:
-    http://www.ubuntu.com/business/services/cloud
-
-597 packages can be updated.
-444 updates are security updates.
-
-New release '16.04.5 LTS' available.
-Run 'do-release-upgrade' to upgrade to it.
-
-
-Last login: Fri Feb  1 22:34:53 2019 from c-73-116-43-163.hsd1.ca.comcast.net
 ~~~
 {: .output}
 
@@ -165,7 +143,7 @@ i.e.,
 the directory that the computer assumes we want to run commands in,
 unless we explicitly specify something else.
 Here,
-the computer's response is `/home/dcuser`,
+the computer's response is similar to `/projects/a911934c-9abf-4038-97ef-03f8500f7007`,
 which is the top level directory within our cloud system:
 
 ~~~
