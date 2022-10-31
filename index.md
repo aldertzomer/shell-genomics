@@ -33,3 +33,4 @@ There are several reasons to learn how to use the CLI:
 > If you are teaching this lesson in a workshop, please see the 
 > [Instructor notes](./guide/index.html).
 {: .prereq}
+
