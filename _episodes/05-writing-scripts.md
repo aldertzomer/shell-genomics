@@ -318,56 +318,18 @@ machine, not your local one.
 
 ### Moving files between your laptop and your instance
 
-What if the data you need is on your local computer, but you need to get it *into* the
-cloud? There are also several ways to do this, but it's *always* easier
-to start the transfer locally. **This means if you're typing into a terminal, the terminal
-should not be logged into your instance, it should be showing your local computer. If you're
-using a transfer program, it needs to be installed on your local machine, not your instance.**
+Normally we would use SCP to transfer files between your laptop and the Linux machine, however we are now going to use the webbrowser:
 
 ## Transferring Data Between your Local Machine and the Cloud
 
-These directions are platform specific, so please follow the instructions for your system:
+Press File, Upload
 
-**Please select the platform you wish to use for the exercises: <select id="id_platform" name="platformlist" onchange="change_content_by_platform('id_platform');return false;"><option value="unix" id="id_unix" selected> UNIX </option><option value="win" id="id_win" selected> Windows </option></select>**
+![image](https://user-images.githubusercontent.com/10392411/199008431-6947dce5-7482-45c4-a9eb-57fac281cc1e.png)
 
+and then Upload at the right
 
+![image](https://user-images.githubusercontent.com/10392411/199008668-fffc1285-f4ae-4a02-91f8-541fb3d87e7d.png)
 
-<div id="div_unix" style="display:block" markdown="1">
-
-### Uploading Data to your Virtual Machine with scp
-
-`scp` stands for 'secure copy protocol', and is a widely used UNIX tool for moving files
-between computers. The simplest way to use `scp` is to run it in your local terminal,
-and use it to copy a single file:
-
-~~~
-scp <file I want to move> <where I want to move it>
-~~~
-{: .bash}
-
-Note that you are always running `scp` locally, but that *doesn't* mean that
-you can only move files from your local computer. In order to move a file from your local computer to an AWS instance, the command would look like this:
-
-~~~
-$ scp <local file> <AWS instance>
-~~~
-{: .bash}
-
-To move it back to your local computer, you re-order the `to` and `from` fields:
-
-~~~
-$ scp <AWS instance> <local file>
-~~~
-{: .bash}
-
-#### Uploading Data to your Virtual Machine with scp
-
-Open the terminal and use the `scp` command to upload a file (e.g. local_file.txt) to the dcuser home directory:
-
-~~~
-$  scp local_file.txt dcuser@ip.address:/home/dcuser/
-~~~
-{: .bash}
 
 #### Downloading Data from your Virtual Machine with scp
 
@@ -381,54 +343,12 @@ $ find ~ -name *.txt
 {: .bash}
 
 
-Download the bad reads file in ~/shell_data/scripted_bad_reads.txt to your home ~/Download directory using the following command **(make sure you substitute dcuser@ip.address with your remote login credentials)**:
+Download the bad reads file in ~/shell_data/scripted_bad_reads.txt to your home ~/Download directory using the webbrowser
 
-~~~
-$ scp dcuser@ip.address:/home/dcuser/shell_data/untrimmed_fastq/scripted_bad_reads.txt ~/Downloads
-~~~
-{: .bash}
+Select the file, press download. In this example another file is selected:
 
-Remember that in both instances, the command is run from your local machine, we've just flipped the order of the to and from parts of the command.
-</div>
-
+![image](https://user-images.githubusercontent.com/10392411/199009136-3cfc3cfa-091e-4336-b5b6-1dbdd67f2852.png)
 
 <div id="div_win" style="display:block" markdown="1">
-
-### Uploading Data to your Virtual Machine with PSCP
-
-If you're using a PC, we recommend you use the *PSCP* program. This program is from the same suite of
-tools as the PuTTY program we have been using to connect.
-
-1. If you haven't done so, download pscp from [http://the.earth.li/~sgtatham/putty/latest/x86/pscp.exe](http://the.earth.li/~sgtatham/putty/latest/x86/pscp.exe)
-2. Make sure the *PSCP* program is somewhere you know on your computer. In this case,
-your Downloads folder is appropriate.
-3. Open the windows [PowerShell](https://en.wikipedia.org/wiki/Windows_PowerShell);
-go to your start menu/search enter the term **'cmd'**; you will be able to start the shell
-(the shell should start from C:\Users\your-pc-username>).
-4. Change to the Downloads directory:
-
-~~~
-> cd Downloads
-~~~
-{: .bash}
-
-5. Locate a file on your computer that you wish to upload (be sure you know the path). Then upload it to your remote machine **(you will need to know your AMI instance address (which starts with ec2), and login credentials)**. You will be prompted to enter a password, and then your upload will begin. **(make sure you substitute 'your-pc-username' for your actual pc username and 'ec2-54-88-126-85.compute-1.amazonaws.com' with your AMI instance address)**
-
-~~~
-C:\User\your-pc-username\Downloads> pscp.exe local_file.txt dcuser@ec2-54-88-126-85.compute-1.amazonaws.com:/home/dcuser/
-~~~
-{: .bash}
-
-### Downloading Data from your Virtual Machine with PSCP
-
-1. Follow the instructions in the Upload section to download (if needed) and access the *PSCP* program (steps 1-3)
-2. Download the text file to your current working directory (represented by a .) using the following command **(make sure you substitute 'your-pc-username' for your actual pc username and 'ec2-54-88-126-85.compute-1.amazonaws.com' with your AMI instance address)**
-
-~~~
-C:\User\your-pc-username\Downloads> pscp.exe dcuser@ec2-54-88-126-85.compute-1.amazonaws.com:/home/dcuser/shell_data/untrimmed_fastq/scripted_bad_reads.txt .
-
-C:\User\your-pc-username\Downloads
-~~~
-{: .bash}
 
 </div>
