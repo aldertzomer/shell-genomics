@@ -87,9 +87,9 @@ This will scroll your screen down to give you a fresh screen and will make it ea
 You haven't lost any of the information on your screen. If you scroll up, you can see everything that has been output to your screen
 up until this point.
 
-## Tip
-Hot-key combinations are shortcuts for performing common commands.
-The hot-key combination for clearing the console is `Ctrl+L`. Feel free to try it and see for yourself.
+> ## Tip
+> Hot-key combinations are shortcuts for performing common commands.
+> The hot-key combination for clearing the console is `Ctrl+L`. Feel free to try it and see for yourself.
 {: .callout}
 
 ## Navigating your file system
@@ -152,7 +152,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/home/dcuser
+/projects/7b65ee5d-xxxx-yyyy-zzzz-6d894eca83b8
 ~~~
 {: .output}
 
@@ -165,7 +165,7 @@ $ ls
 {: .bash}
 
 ~~~
-R  r_data  shell_data
+course_content  coursedata
 ~~~
 {: .output}
 
@@ -178,17 +178,20 @@ The command to change locations in our file system is `cd`, followed by a
 directory name to change our working directory.
 `cd` stands for "change directory".
 
-Let's say we want to navigate to the `shell_data` directory we saw above.  We can
+Let's say we want to navigate to the `coursedata` directory we saw above.  We can
 use the following command to get there:
 
 ~~~
-$ cd shell_data
+$ cd coursedata
 ~~~
 {: .bash}
 
-Let's look at what is in this directory:
+We will now move a few directories deeper (since we are in the cocalc environment all files and folders needed are available from the `~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex` directory. Let us mover there first and then look at what it contains. This directory is READ ONLY so you cannot damage anyones files.  
+  
+Let's move and look at what is in this directory:
 
 ~~~
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex
 $ ls
 ~~~
 {: .bash}
@@ -226,11 +229,16 @@ for `bash` commands. It is a powerful resource to explore `bash` commands, under
 their usage and flags. Some manual files are very long. You can scroll through the
 file using your keyboard's down arrow or use the <kbd>Space</kbd> key to go forward one page
 and the <kbd>b</kbd> key to go backwards one page. When you are done reading, hit <kbd>q</kbd>
-to quit.
+to quit.  
+  
+Please note that in the cocalc training environment the manual files have not been included to keep the system as minimal as possible. Usually these manual pages are available in a default unix shell environment. You can find the manual pages on the internet https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html.  
+Alternative many commands give you a shorter explanation by appending ` --help` after the command or if that doesn't work try ` -h` instead. Try it yourself for the `ls` command `ls --help`.  
+  
 
 > ## Challenge
 > Use the `-l` option for the `ls` command to display more information for each item 
-> in the directory. What is one piece of additional information this long format
+> in the directory. Since it is used very often most shell environments provide the alias `ll` which stands for `ls -h` which is relative long to type.  
+> What is one piece of additional information this long format
 > gives you that you don't see with the bare `ls` command?
 >
 > > ## Solution
@@ -278,9 +286,7 @@ We will be learning more about FASTQ files in a later lesson.
 
 Typing out file or directory names can waste a
 lot of time and it's easy to make typing mistakes. Instead we can use tab complete 
-as a shortcut. When you start typing out the name of a directory or file, then
-hit the <kbd>Tab</kbd> key, the shell will try to fill in the rest of the
-directory or file name.
+as a shortcut. 
 
 Return to your home directory:
 
@@ -292,18 +298,17 @@ $ cd
 then enter:
 
 ~~~
-$ cd she<tab>
+$ cd coursed<tab>
 ~~~
 {: .bash}
 
 The shell will fill in the rest of the directory name for
-`shell_data`.
+`shell_data`. If there are more directories matching the entered text hit <tab><tab> and a list of matches will be shown allowing you to further specify which directory you actually mean.
 
-Now change directories to `untrimmed_fastq` in `shell_data`
+Now change directories to `untrimmed_fastq` in `coursedata` using tab-completion, we'll have to navigate through 2 additional directories
 
 ~~~
-$ cd shell_data
-$ cd untrimmed_fastq
+$ cd B-MBIMIGE22-23/intro_genomics_timalex/untrimmed_fastq
 ~~~
 {: .bash}
 
