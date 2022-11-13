@@ -60,10 +60,10 @@ $ pwd
 ~~~
 {: .bash}
 
-You should see the output: 
+You should see output similar to below: 
 
 ~~~
-/home/dcuser  
+/projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007  
 ~~~
 {: .output}
 
@@ -126,7 +126,7 @@ your data that you never modify guarantees that you will always be
 able to start over if something goes wrong with your analysis. When
 starting any analysis, you can make a copy of your raw data file and
 do your manipulations on that file, rather than the raw version. We
-learned in [a previous episode](http://www.datacarpentry.org/shell-genomics/03-working-with-files/#file-permissions) how to prevent overwriting our raw data
+learned in [a previous episode](https://aldertzomer.github.io/shell-genomics/03-working-with-files/#file-permissions) how to prevent overwriting our raw data
 files by setting restrictive file permissions. 
 
 You can store any results that are generated from your analysis in
