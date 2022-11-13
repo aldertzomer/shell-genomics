@@ -32,7 +32,7 @@ have two results files, which are stored in our `untrimmed_fastq` directory.
 Navigate to your `untrimmed_fastq` directory:
 
 ~~~
-$ cd ~/shell_data/untrimmed_fastq
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -74,7 +74,7 @@ $ ls /usr/bin/*.sh
 {: .bash}
 
 ~~~
-/usr/bin/amuFormat.sh  /usr/bin/gettext.sh  /usr/bin/gvmap.sh
+/usr/bin/gettext.sh  /usr/bin/gvmap.sh
 ~~~
 {: .output}
 
@@ -227,14 +227,14 @@ This will print out all of the contents of the `SRR098026.fastq` to the screen.
 
 > ## Exercise
 > 
-> 1. Print out the contents of the `~/shell_data/untrimmed_fastq/SRR097977.fastq` file. What is the last line of the file? 
+> 1. Print out the contents of the `shell_data/untrimmed_fastq/SRR097977.fastq` file. What is the last line of the file? 
 > 2.  From your home directory, and without changing directories,
 > use one short command to print the contents of all of the files in
-> the `~/shell_data/untrimmed_fastq` directory.
+> the `shell_data/untrimmed_fastq` directory.
 > 
 > > ## Solution
 > > 1. The last line of the file is `C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$`.
-> > 2. `cat ~/shell_data/untrimmed_fastq/*`
+> > 2. `cat ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/*`
 > {: .solution}
 {: .challenge}
 
@@ -243,7 +243,7 @@ be annoying to use. The program, `less`, is useful for this
 case. `less` opens the file as read only, and lets you navigate through it. The navigation commands
 are identical to the `man` program.
 
-Enter the following command:
+Enter the following command (make sure you are still in the `shell_data/untrimmed_fastq` directory):
 
 ~~~
 $ less SRR097977.fastq
@@ -446,6 +446,13 @@ but there will be some cases (like when you're working with a remote computer li
 impossible. You'll also find that you may be working with hundreds of files and want to do similar manipulations to all 
 of those files. In cases like this, it's much faster to do these operations at the command line.
 
+
+### Please note
+> On our cocalc system all the data provided in `~/coursedata` is READ ONLY. So you cannot delete, copy or create files 
+> and folders there. The only place you can do that is in your home `~` directory! So please prepend your writing actions with `~/`.
+{: .prereq}
+
+
 ### Copying Files
 
 When working with computational data, it's important to keep a safe copy of that data that can't be accidentally overwritten or deleted. 
@@ -457,17 +464,17 @@ First, let's make a copy of one of our FASTQ files using the `cp` command.
 Navigate to the `shell_data/untrimmed_fastq` directory and enter:
 
 ~~~
-$ cp SRR098026.fastq SRR098026-copy.fastq
-$ ls -F
+$ cp SRR098026.fastq ~/SRR098026-copy.fastq
+$ ls ~/ -F
 ~~~
 {: .bash}
 
 ~~~
-SRR097977.fastq  SRR098026-copy.fastq  SRR098026.fastq
+SRR098026-copy.fastq
 ~~~
 {: .output}
 
-We now have two copies of the `SRR098026.fastq` file, one of them named `SRR098026-copy.fastq`. We'll move this file to a new directory
+We now have a copy of the `SRR098026.fastq` file named `SRR098026-copy.fastq`. We'll move this file to a new directory
 called `backup` where we'll store our backup data files.
 
 ### Creating Directories
@@ -476,7 +483,7 @@ The `mkdir` command is used to make a directory. Enter `mkdir`
 followed by a space, then the directory name you want to create:
 
 ~~~
-$ mkdir backup
+$ mkdir ~/backup
 ~~~
 {: .bash}
 
@@ -486,8 +493,8 @@ We can now move our backup file to this directory. We can
 move files around using the command `mv`: 
 
 ~~~
-$ mv SRR098026-copy.fastq backup
-$ ls backup
+$ mv ~/SRR098026-copy.fastq ~/backup
+$ ls ~/backup
 ~~~
 {: .bash}
  
@@ -499,7 +506,7 @@ SRR098026-copy.fastq
 The `mv` command is also how you rename files. Let's rename this file to make it clear that this is a backup:
 
 ~~~
-$ cd backup
+$ cd ~/backup
 $ mv SRR098026-copy.fastq SRR098026-backup.fastq
 $ ls
 ~~~
@@ -516,7 +523,7 @@ We've now made a backup copy of our file, but just because we have two copies, i
 overwrite both copies. To make sure we can't accidentally mess up this backup file, we're going to change the permissions on the file so
 that we're only allowed to read (i.e. view) the file, not write to it (i.e. make new changes).
 
-View the current permissions on a file using the `-l` (long) flag for the `ls` command: 
+View the current permissions on a file using the `-l` (long) flag for the `ls` command (or use `ll`): 
 
 ~~~
 $ ls -l
@@ -594,20 +601,20 @@ you will be asked whether you want to override your permission settings.
 > ## Exercise
 >
 > Starting in the `shell_data/untrimmed_fastq/` directory, do the following:
-> 1. Make sure that you have deleted your backup directory and all files it contains.  
-> 2. Create a backup of each of your FASTQ files using `cp`. (Note: You'll need to do this individually for each of the two FASTQ files. We haven't 
-> learned yet how to do this
-> with a wildcard.)  
-> 3. Use a wildcard to move all of your backup files to a new backup directory.   
+> 1. Make sure that you have deleted your ~/backup directory and all files it contains.  
+> 2. Create the backup directory in your home directory.  
+> 3. Create a backup of each of your FASTQ files using `cp` directly in the ~/backup directory. 
+> (Note: You'll need to do this individually for each of the two FASTQ files. We haven't 
+> learned yet how to do this with a wildcard.)     
 > 4. Change the permissions on all of your backup files to be write-protected.  
 >
 > > ## Solution
 > >
-> > 1. `rm -r backup`  
-> > 2. `cp SRR098026.fastq SRR098026-backup.fastq` and `cp SRR097977.fastq SRR097977-backup.fastq`  
-> > 3. `mkdir backup` and `mv *-backup.fastq backup`
-> > 4. `chmod -w backup/*-backup.fastq`   
-> > It's always a good idea to check your work with `ls -l backup`. You should see something like: 
+> > 1. `rm -r ~/backup`  
+> > 2. `mkdir ~/backup`  
+> > 3. `cp SRR098026.fastq ~/backup/SRR098026-backup.fastq` and `cp SRR097977.fastq ~/backup/SRR097977-backup.fastq`  
+> > 4. `chmod -w ~/backup/*-backup.fastq`   
+> > It's always a good idea to check your work with `ls -l ~/backup`. You should see something like: 
 > > 
 > > ~~~
 > > -r--r--r-- 1 dcuser dcuser 47552 Nov 15 23:06 SRR097977-backup.fastq
