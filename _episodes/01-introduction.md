@@ -191,7 +191,7 @@ We will now move a few directories deeper (since we are in the cocalc environmen
 Let's move and look at what is in this directory:
 
 ~~~
-$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 $ ls
 ~~~
 {: .bash}
@@ -308,7 +308,7 @@ The shell will fill in the rest of the directory name for
 Now change directories to `untrimmed_fastq` in `coursedata` using tab-completion, we'll have to navigate through 2 additional directories
 
 ~~~
-$ cd B-MBIMIGE22-23/intro_genomics_timalex/untrimmed_fastq
+$ cd B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
