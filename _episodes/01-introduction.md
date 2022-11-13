@@ -70,7 +70,7 @@ After logging in and navigating to your project and clicking on "New", "terminal
 
 ![image](https://user-images.githubusercontent.com/10392411/199006892-1f4bcbe9-643c-48bd-b251-df263a8ce753.png)
 
-~~~
+
 {: .output}
 
 This provides a lot of information about the remote server that you're logging into. We're not going to use most of this information for
