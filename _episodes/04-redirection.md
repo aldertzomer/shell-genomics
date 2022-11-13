@@ -45,7 +45,7 @@ We'll search for strings inside of our fastq files. Let's first make sure we are
 directory:
 
 ~~~
-$ cd ~/shell_data/untrimmed_fastq
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -161,10 +161,12 @@ The command for redirecting output to a file is `>`.
 
 Let's try out this command and copy all the records (including all four lines of each record) 
 in our FASTQ files that contain 
-'NNNNNNNNNN' to another file called `bad_reads.txt`.
+'NNNNNNNNNN' to another file called `bad_reads.txt`.  
+Remember that we can only WRITE to our own home directory!  
+
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -193,7 +195,7 @@ As of Sept. 2020, wc gives the following output:
 
 
 ~~~
-$ wc bad_reads.txt
+$ wc ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -206,7 +208,7 @@ This will tell us the number of lines, words and characters in the file. If we
 want only the number of lines, we can use the `-l` flag for `lines`.
 
 ~~~
-$ wc -l bad_reads.txt
+$ wc -l ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -245,8 +247,8 @@ $ wc -l bad_reads.txt
 >>  
 >>
 >> ~~~
->> $ grep NNN SRR098026.fastq > bad_reads.txt
->> $ wc -l bad_reads.txt
+>> $ grep NNN SRR098026.fastq > ~/bad_reads.txt
+>> $ wc -l ~/bad_reads.txt
 >> ~~~
 >> {: .bash}
 >> 
@@ -265,8 +267,8 @@ This is called "overwriting" and, just like you don't want to overwrite your vid
 of your kid's first birthday party, you also want to avoid overwriting your data files.
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > bad_reads.txt
-$ wc -l bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > ~/bad_reads.txt
+$ wc -l ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -276,8 +278,8 @@ $ wc -l bad_reads.txt
 {: .output}
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR097977.fastq > bad_reads.txt
-$ wc -l bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN SRR097977.fastq > ~/bad_reads.txt
+$ wc -l ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -294,8 +296,8 @@ We can avoid overwriting our files by using the command `>>`. `>>` is known as t
 append new output to the end of a file, rather than overwriting it.
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > bad_reads.txt
-$ wc -l bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > ~/bad_reads.txt
+$ wc -l ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -305,8 +307,8 @@ $ wc -l bad_reads.txt
 {: .output}
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR097977.fastq >> bad_reads.txt
-$ wc -l bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN SRR097977.fastq >> ~/bad_reads.txt
+$ wc -l ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -320,8 +322,8 @@ The output of our second call to `wc` shows that we have not overwritten our ori
 We can also do this with a single line of code by using a wildcard: 
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN *.fastq > bad_reads.txt
-$ wc -l bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN *.fastq > ~/bad_reads.txt
+$ wc -l ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -338,12 +340,12 @@ $ wc -l bad_reads.txt
 > would give us a warning. 
 > 
 > ~~~
-> grep -B1 -A2 NNNNNNNNNN *.fastq > bad_reads.fastq
+> grep -B1 -A2 NNNNNNNNNN ~/*.fastq > ~/bad_reads.fastq
 > ~~~
 > {: .bash}
 > 
 > ~~~
-> grep: input file ‘bad_reads.fastq’ is also the output
+> grep: input file ‘~/bad_reads.fastq’ is also the output
 > ~~~
 > {: .output}
 > 
@@ -395,8 +397,8 @@ If we explore `bad_reads.txt` using `less`, we might be able to notice what is c
 number of lines. Luckily, this issue happens by the end of the file so we can also spot it with `tail`.
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > bad_reads.txt
-$ tail bad_reads.txt
+$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > ~/bad_reads.txt
+$ tail ~/bad_reads.txt
 ~~~
 {: .bash}
 
@@ -419,8 +421,8 @@ lines matching the pattern, and indicate groups of lines which did not match the
 To fix this issue, we can redirect the output of grep to a second instance of `grep` as follows.
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq | grep -v '^--' > bad_reads.fastq
-tail bad_reads.fastq
+$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq | grep -v '^--' > ~/bad_reads.fastq
+tail ~/bad_reads.fastq
 ~~~
 {: .bash}
 
@@ -461,7 +463,7 @@ efficiently.
 
 > # File manipulation and more practices with pipes
 > 
-> To practice a bit more with the tools we’ve added to our tool kit so far and learn a few extra ones you can follow [this extra lesson](https://datacarpentry.org/shell-genomics/Extra_lesson/index.html) which uses the SRA metadata file. 
+> To practice a bit more with the tools we’ve added to our tool kit so far and learn a few extra ones you can follow [this extra lesson](https://aldertzomer.github.io/shell-genomics/Extra_lesson/index.html) which uses the SRA metadata file. 
 > 
 {: .callout}
 
@@ -510,7 +512,7 @@ foo is abcEFG
 Let's write a for loop to show us the first two lines of the fastq files we downloaded earlier. You will notice the shell prompt changes from `$` to `>` and back again as we were typing in our loop. The second prompt, `>`, is different to remind us that we haven’t finished typing a complete command yet. A semicolon, `;`, can be used to separate two commands written on a single line.
 
 ~~~
-$ cd ../untrimmed_fastq/
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/
 ~~~
 {: .bash}
 
@@ -534,7 +536,7 @@ will save this information to a file.
 ~~~
 $ for filename in *.fastq
 > do
-> head -n 2 ${filename} >> seq_info.txt
+> head -n 2 ${filename} >> ~/seq_info.txt
 > done
 ~~~
 {: .bash}
@@ -592,7 +594,7 @@ $ for filename in *.fastq
 
 > ## Exercise
 >
-> Print the file prefix of all of the `.txt` files in our current directory.
+> Print the file prefix of all of the `.txt` files in our `shell_data/sra_metadata` directory.
 >
 >> ## Solution
 >>  
@@ -615,7 +617,7 @@ One way this is really useful is to move files. Let's rename all of our .txt fil
 $ for filename in *.txt
 > do
 > name=$(basename ${filename} .txt)
-> mv ${filename}  ${name}_2019.txt
+> mv ${filename}  ~/${name}_2019.txt
 > done
 ~~~
 {: .bash}
@@ -629,10 +631,10 @@ $ for filename in *.txt
 >>  
 >>
 >> ~~~
->> $ for filename in *_2019.txt
+>> $ for filename in ~/*_2019.txt
 >> > do
 >> > name=$(basename ${filename} _2019.txt)
->> > mv ${filename} ${name}.txt
+>> > mv ${filename} ~/${name}.txt
 >> > done
 >> ~~~
 >> {: .bash}
