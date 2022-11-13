@@ -9,7 +9,7 @@ Let's use the tools we've added to our tool kit so far, along with a few new one
 
 ~~~
 $ cd
-$ cd shell_data/sra_metadata
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/sra_metadata
 ~~~
 {: .bash}
 
@@ -213,7 +213,7 @@ sort based on a particular column. This is similar to the `-f` flag for `cut`.
 Let's sort based on the third column (`-k3`) and redirect our output to a new file.
 
 ~~~
-$ sort -k3 SraRunTable.txt > SraRunTable_sorted_by_layout.txt
+$ sort -k3 SraRunTable.txt > ~/SraRunTable_sorted_by_layout.txt
 ~~~
 {: .bash}
 
@@ -239,7 +239,7 @@ There are only two results, so we can use "PAIRED" as our search term to extract
 samples to a new file.
 
 ~~~
-$ grep PAIRED SraRunTable.txt > SraRunTable_only_paired_end.txt
+$ grep PAIRED SraRunTable.txt > ~/SraRunTable_only_paired_end.txt
 ~~~
 {: .bash}
 
@@ -250,8 +250,8 @@ $ grep PAIRED SraRunTable.txt > SraRunTable_only_paired_end.txt
 > > ## Solution
 > > 
 > > ~~~ 
-> > $ grep 25-Jul-12 SraRunTable.txt > SraRunTable_25-Jul-12.txt
-> > $ grep 29-May-14 SraRunTable.txt > SraRunTable_29-May-14.txt
+> > $ grep 25-Jul-12 SraRunTable.txt > ~/SraRunTable_25-Jul-12.txt
+> > $ grep 29-May-14 SraRunTable.txt > ~/SraRunTable_29-May-14.txt
 > > ~~~
 > > {: .bash}
 > >
@@ -264,7 +264,7 @@ In Lesson 05 (Writing Scripts) we used the `grep` command line tool to look for 
 lots of Ns from all the .fastq files in our current folder using the following code: 
 
 ~~~
-$ grep -B1 -A2 -h NNNNNNNNNN *.fastq | grep -v '^--' > scripted_bad_reads.txt
+$ grep -B1 -A2 -h NNNNNNNNNN *.fastq | grep -v '^--' > ~/scripted_bad_reads.txt
 ~~~
 {: .bash}
 
@@ -274,12 +274,12 @@ file they want to examine for bad reads.
 
 We can accomplish these goals by including the above command in a script that takes in user input
 via a command line argument. We can slightly modify our `bad-reads-script.sh` file to do so. Use
-`c` to copy your `bad-reads-script.sh` into a new script called `custom-bad-reads-script.sh`. Make
+`c` to copy your `bad-reads-script.sh` into a new script called `~/custom-bad-reads-script.sh`. Make
 the following modifications to `custom-bad-reads-script.sh`:
 
 ~~~
 filename=$1
-grep -B1 -A2 -h NNNNNNNNNN $filename | grep -v '^--' > scripted_bad_reads.txt
+grep -B1 -A2 -h NNNNNNNNNN $filename | grep -v '^--' > ~/scripted_bad_reads.txt
 ~~~
 {: .bash}
 
@@ -289,7 +289,7 @@ after the name of the script itself and assign that value to a variable called f
 For example, this script can be run in the following way to output the bad reads just from one file: 
 
 ~~~
-bash custom-bad-reads-script.sh SRR098026.fastq
+bash ~/custom-bad-reads-script.sh SRR098026.fastq
 ~~~
 {: .bash}
 
@@ -312,7 +312,7 @@ This should be same output as using our original code and manually modifying the
 original standalone code on the command line to "SRR098026.fastq" on the command line,
 which should give us the same output as above:
 ~~~
-$ grep -B1 -A2 -h NNNNNNNNNN SRR098026.fastq | grep -v '^--' > scripted_bad_reads.txt
+$ grep -B1 -A2 -h NNNNNNNNNN SRR098026.fastq | grep -v '^--' > ~/scripted_bad_reads.txt
 head scripted_bad_reads.txt
 ~~~
 {: .bash}
