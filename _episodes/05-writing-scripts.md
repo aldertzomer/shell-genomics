@@ -39,16 +39,16 @@ window.onload = set_page_view_defaults;
 
 We've been able to do a lot of work with files that already exist, but what if we want to write our own files? We're not going to type in a FASTA file, but we'll see as we go through other tutorials, there are a lot of reasons we'll want to write a file, or edit an existing file.
 
-To add text to files, we're going to use a text editor called Nano. We're going to create a file to take notes about what we've been doing with the data files in `~/shell_data/untrimmed_fastq`.
+To add text to files, we're going to use a text editor called Nano. We're going to create a file to take notes about what we've been doing with the data files in `shell_data/untrimmed_fastq`.
 
 This is good practice when working in bioinformatics. We can create a file called `README.txt` that describes the data files in the directory or documents how the files in that directory were generated.  As the name suggests, it's a file that we or others should read to understand the information in that directory.
 
-Let's change our working directory to `~/shell_data/untrimmed_fastq` using `cd`,
-then run `nano` to create a file called `README.txt`:
+Let's change our working directory to `shell_data/untrimmed_fastq` using `cd`,
+then run `nano` to create a file called `README.txt` (remember we can only create files in our HOME directory!):
 
 ~~~
-$ cd ~/shell_data/untrimmed_fastq
-$ nano README.txt
+$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ nano ~/README.txt
 ~~~
 {: .bash}
 
@@ -118,7 +118,7 @@ Now you've written a file. You can take a look at it with `less` or `cat`, or op
 >
 > > ## Solution
 > > 
-> > Use `nano README.txt` to open the file.  
+> > Use `nano ~/README.txt` to open the file.  
 > > Add today's date and then use <kbd>Ctrl</kbd>-<kbd>X</kbd> followed by `y` and <kbd>Enter</kbd> to save.
 > >
 > {: .solution}
@@ -134,20 +134,20 @@ One thing we will commonly want to do with sequencing results is pull out bad re
 We're going to create a new file to put this command in. We'll call it `bad-reads-script.sh`. The `sh` isn't required, but using that extension tells us that it's a shell script.
 
 ~~~
-$ nano bad-reads-script.sh
+$ nano ~/bad-reads-script.sh
 ~~~
 {: .bash}
 
 Bad reads have a lot of N's, so we're going to look for  `NNNNNNNNNN` with `grep`. We want the whole FASTQ record, so we're also going to get the one line above the sequence and the two lines below. We also want to look in all the files that end with `.fastq`, so we're going to use the `*` wildcard.
 
 ~~~
-grep -B1 -A2 -h NNNNNNNNNN *.fastq | grep -v '^--' > scripted_bad_reads.txt
+grep -B1 -A2 -h NNNNNNNNNN *.fastq | grep -v '^--' > ~/scripted_bad_reads.txt
 ~~~
 {: .bash}
 
 > ## Custom `grep` control
 >
-> We introduced the `-v` option in [the previous episode](http://www.datacarpentry.org/shell-genomics/04-redirection/), now we 
+> We introduced the `-v` option in [the previous episode](https://aldertzomer.github.io/shell-genomics/04-redirection/), now we 
 > are using `-h` to "Suppress the prefixing of file names on output" according to the documentation shown by `man grep`.
 > 
 {: .callout}
@@ -157,23 +157,23 @@ Type your `grep` command into the file and save it as before. Be careful that yo
 Now comes the neat part. We can run this script. Type:
 
 ~~~
-$ bash bad-reads-script.sh
+$ bash ~/bad-reads-script.sh
 ~~~
 {: .bash}
 
-It will look like nothing happened, but now if you look at `scripted_bad_reads.txt`, you can see that there are now reads in the file.
+It will look like nothing happened, but now if you look at `~/scripted_bad_reads.txt`, you can see that there are now reads in the file.
 
 
 > ## Exercise
 >
 > We want the script to tell us when it's done.  
-> 1. Open `bad-reads-script.sh` and add the line `echo "Script finished!"` after the `grep` command and save the file.  
+> 1. Open `~/bad-reads-script.sh` and add the line `echo "Script finished!"` after the `grep` command and save the file.  
 > 2. Run the updated script.
 >
 > > ## Solution
 > > 
 > >    ```
-> >   $ bash bad-reads-script.sh
+> >   $ bash ~/bad-reads-script.sh
 > >   Script finished!
 > >   ```
 > >
@@ -182,12 +182,12 @@ It will look like nothing happened, but now if you look at `scripted_bad_reads.t
 
 ## Making the script into a program
 
-We had to type `bash` because we needed to tell the computer what program to use to run this script. Instead, we can turn this script into its own program. We need to tell the computer that this script is a program by making the script file executable. We can do this by changing the file permissions. We talked about permissions in [an earlier episode](http://www.datacarpentry.org/shell-genomics/03-working-with-files/).
+We had to type `bash` because we needed to tell the computer what program to use to run this script. Instead, we can turn this script into its own program. We need to tell the computer that this script is a program by making the script file executable. We can do this by changing the file permissions. We talked about permissions in [an earlier episode](https://aldertzomer.github.io/shell-genomics/03-working-with-files/).
 
 First, let's look at the current permissions.
 
 ~~~
-$ ls -l bad-reads-script.sh
+$ ls -l ~/bad-reads-script.sh
 ~~~
 {: .bash}
 
@@ -199,23 +199,23 @@ $ ls -l bad-reads-script.sh
 We see that it says `-rw-r--r--`. This shows that the file can be read by any user and written to by the file owner (you). We want to change these permissions so that the file can be executed as a program. We use the command `chmod` like we did earlier when we removed write permissions. Here we are adding (`+`) executable permissions (`+x`).
 
 ~~~
-$ chmod +x bad-reads-script.sh
+$ chmod u+x ~/bad-reads-script.sh
 ~~~
 {: .bash}
 
 Now let's look at the permissions again.
 
 ~~~
-$ ls -l bad-reads-script.sh
+$ ls -l ~/bad-reads-script.sh
 ~~~
 {: .bash}
 
 ~~~
--rwxrwxr-x 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
+-rwxrw-r-- 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
 ~~~
 {: .output}
 
-Now we see that it says `-rwxr-xr-x`. The `x`'s that are there now tell us we can run it as a program. So, let's try it! We'll need to put `./` at the beginning so the computer knows to look here in this directory for the program.
+Now we see that it says `-rwxr--r--`. The `x`'s that are there now tell us we can run it as a program. So, let's try it! We'll need to put `./` at the beginning if the script is in the CURRENT directory so the computer knows to look here in this directory for the program. Otherwise we need to supply its path. We need to say the script is in the home directory `~/` instead of `./`!
 
 ~~~
 $ ./bad-reads-script.sh
@@ -224,7 +224,7 @@ $ ./bad-reads-script.sh
 
 The script should run the same way as before, but now we've created our very own computer program!
 
-You will learn more about writing scripts in [a later lesson](https://datacarpentry.org/wrangling-genomics/05-automation/index.html).
+You will learn more about writing scripts in [a later lesson](https://aldertzomer.github.io/wrangling-genomics/05-automation/index.html).
 
 ## Moving and Downloading Data
 
@@ -333,7 +333,7 @@ and then Upload at the right
 
 #### Downloading Data from your Virtual Machine with scp
 
-Let's download a text file from our remote machine. You should have a file that contains bad reads called ~/shell_data/scripted_bad_reads.txt.
+Let's download a text file from our remote machine. You should have a file that contains bad reads called ~/scripted_bad_reads.txt.
 
 **Tip:** If you are looking for another (or any really) text file in your home directory to use instead, try:
 
@@ -343,7 +343,7 @@ $ find ~ -name *.txt
 {: .bash}
 
 
-Download the bad reads file in ~/shell_data/scripted_bad_reads.txt to your home ~/Download directory using the webbrowser
+Download the bad reads file in ~/scripted_bad_reads.txt to your home local Download directory using the webbrowser
 
 Select the file, press download. In this example another file is selected:
 
