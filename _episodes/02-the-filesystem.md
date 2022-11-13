@@ -25,11 +25,11 @@ of a directory. Now we're going to learn some additional commands for moving aro
 within our file system.
 
 Use the commands we've learned so far to navigate to the `shell_data/untrimmed_fastq` directory, if
-you're not already there. 
+you're not already there. Remember to use <tab> completion! 
 
 ~~~
 $ cd
-$ cd shell_data
+$ cd coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 $ cd untrimmed_fastq
 ~~~
 {: .bash}
@@ -67,8 +67,10 @@ $ pwd
 ~~~
 {: .bash}
 
+Returns something similar ot below:
+  
 ~~~
-/home/dcuser/shell_data
+/projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 ~~~
 {: .output}
 
@@ -91,7 +93,7 @@ $ ls ../../
 ~~~
 {: .bash}
 
-prints the contents of `/home`.
+prints the contents of `~/coursedata/B-MBIMIGE22-23`.
 
 > ## Finding hidden directories
 >
@@ -168,7 +170,7 @@ $ cd
 Then enter the command:
 
 ~~~
-$ ls shell_data
+$ ls course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 ~~~
 {: .bash}
 
@@ -186,7 +188,7 @@ Try entering:
 
 ~~~
 $ cd
-$ cd shell_data/untrimmed_fastq
+$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -202,7 +204,7 @@ the intermediate directory.
 > >
 > > ~~~
 > > $ cd
-> > $ ls shell_data/untrimmed_fastq/
+> > $ ls course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/
 > > ~~~
 > > {: .bash}
 > > 
@@ -229,10 +231,10 @@ $ pwd
 ~~~
 {: .bash}
 
-You will see: 
+You will see something like: 
 
 ~~~
-/home/dcuser
+/projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007
 ~~~
 {: .output}
 
@@ -244,10 +246,10 @@ referred to as the *root directory*. So, to summarize: `dcuser` is a
 directory in `home` which is a directory in `/`. More on `root` and
 `home` in the next section.
 
-Now enter the following command:
+Now enter the following command (substitute the long code after projects/ with your own specific code):
 
 ~~~
-$ cd /home/dcuser/shell_data/.hidden
+$ cd /projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/.hidden
 ~~~
 {: .bash}
 
@@ -329,7 +331,7 @@ In our case, the `root` directory is __two__ levels above our
 
 ~~~
 $ cd
-$ cd shell_data
+$ cd coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 ~~~
 {: .bash}
 
@@ -341,7 +343,7 @@ $ ls ~
 {: .bash}
 
 ~~~
-R  r_data  shell_data
+course_content  coursedata
 ~~~
 {: .output}
 
