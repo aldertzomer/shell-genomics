@@ -87,9 +87,9 @@ This will scroll your screen down to give you a fresh screen and will make it ea
 You haven't lost any of the information on your screen. If you scroll up, you can see everything that has been output to your screen
 up until this point.
 
-> ## Tip
-> Hot-key combinations are shortcuts for performing common commands.
-> The hot-key combination for clearing the console is `Ctrl+L`. Feel free to try it and see for yourself.
+## Tip
+Hot-key combinations are shortcuts for performing common commands.
+The hot-key combination for clearing the console is `Ctrl+L`. Feel free to try it and see for yourself.
 {: .callout}
 
 ## Navigating your file system
