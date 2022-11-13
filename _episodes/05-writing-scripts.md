@@ -218,7 +218,7 @@ $ ls -l ~/bad-reads-script.sh
 Now we see that it says `-rwxr--r--`. The `x`'s that are there now tell us we can run it as a program. So, let's try it! We'll need to put `./` at the beginning if the script is in the CURRENT directory so the computer knows to look here in this directory for the program. Otherwise we need to supply its path. We need to say the script is in the home directory `~/` instead of `./`!
 
 ~~~
-$ ./bad-reads-script.sh
+$ ~/bad-reads-script.sh
 ~~~
 {: .bash}
 
