@@ -59,7 +59,7 @@ We will also be using several bioinformatic packages in later lessons and instal
 ## How to access the remote server
 
 You can log-in to the remote server using your webbrowser
-[here](https://cocalc4.science.uu.nl/). 
+[here instance 4](https://cocalc4.science.uu.nl/) and [here instance 6](https://cocalc6.science.uu.nl/). 
 Your instructor will supply to you the username and password that you need to login.
 
 Each of you will have a different username and password. This will 
