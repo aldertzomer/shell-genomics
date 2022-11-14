@@ -237,7 +237,7 @@ Alternative many commands give you a shorter explanation by appending ` --help` 
 
 > ## Challenge
 > Use the `-l` option for the `ls` command to display more information for each item 
-> in the directory. Since it is used very often most shell environments provide the alias `ll` which stands for `ls -h` which is relative long to type.  
+> in the directory. Since it is used very often most shell environments provide the alias `ll` which stands for `ls -l` which is relative long to type.  
 > What is one piece of additional information this long format
 > gives you that you don't see with the bare `ls` command?
 >
