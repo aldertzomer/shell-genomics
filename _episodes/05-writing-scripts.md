@@ -148,7 +148,7 @@ grep -B1 -A2 -h NNNNNNNNNN *.fastq | grep -v '^--' > ~/scripted_bad_reads.txt
 > ## Custom `grep` control
 >
 > We introduced the `-v` option in [the previous episode](https://aldertzomer.github.io/shell-genomics/04-redirection/), now we 
-> are using `-h` to "Suppress the prefixing of file names on output" according to the documentation shown by `man grep`.
+> are using `-h` to "Suppress the prefixing of file names on output" according to the documentation shown by `grep --help` or on full-blown Unix systems using `man grep`.
 > 
 {: .callout}
 
@@ -192,7 +192,7 @@ $ ls -l ~/bad-reads-script.sh
 {: .bash}
 
 ~~~
--rw-rw-r-- 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
+-rw------- 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
 ~~~
 {: .output}
 
@@ -211,11 +211,11 @@ $ ls -l ~/bad-reads-script.sh
 {: .bash}
 
 ~~~
--rwxrw-r-- 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
+-rwx------ 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
 ~~~
 {: .output}
 
-Now we see that it says `-rwxr--r--`. The `x`'s that are there now tell us we can run it as a program. So, let's try it! We'll need to put `./` at the beginning if the script is in the CURRENT directory so the computer knows to look here in this directory for the program. Otherwise we need to supply its path. We need to say the script is in the home directory `~/` instead of `./`!
+Now we see that it says `-rwx------`. The `x`'s that are there now tell us we can run it as a program. So, let's try it! We'll need to put `./` at the beginning if the script is in the CURRENT directory so the computer knows to look here in this directory for the program. Otherwise we need to supply its full path as an alternative. Depending on which directory is your active directory we need to say that our script is in the home directory `~/` instead of `./`!
 
 ~~~
 $ ~/bad-reads-script.sh
@@ -224,7 +224,7 @@ $ ~/bad-reads-script.sh
 
 The script should run the same way as before, but now we've created our very own computer program!
 
-You will learn more about writing scripts in [a later lesson](https://aldertzomer.github.io/wrangling-genomics/05-automation/index.html).
+You will learn more about writing scripts in [a later lesson within wrangling-genomics](https://aldertzomer.github.io/wrangling-genomics/05-automation/index.html).
 
 ## Moving and Downloading Data
 
