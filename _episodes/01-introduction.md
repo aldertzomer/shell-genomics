@@ -256,7 +256,7 @@ Alternative many commands give you a shorter explanation by appending ` --help` 
 > > 
 > > The additional information given includes the name of the owner of the file,
 > > when the file was last modified, and whether the current user has permission
-> > to read and write to the file.
+> > to read and write to the file. In section [Section 3 - working with files and directories](https://aldertzomer.github.io/shell-genomics/03-working-with-files/) we'll explain more what the actual letters in which position actually mean.
 > > 
 > {: .solution}
 {: .challenge}
