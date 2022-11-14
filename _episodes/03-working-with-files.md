@@ -531,7 +531,7 @@ $ ls -l
 {: .bash}
 
 ~~~
--rw-r--r-- 1 dcuser dcuser 43332 Nov 15 23:02 SRR098026-backup.fastq
+-rw------- 1 dcuser dcuser 43332 Nov 15 23:02 SRR098026-backup.fastq
 ~~~
 {: .output}
 
@@ -557,7 +557,7 @@ $ ls -l
 {: .bash}
 
 ~~~
--r--r--r-- 1 dcuser dcuser 43332 Nov 15 23:02 SRR098026-backup.fastq
+-r-------- 1 dcuser dcuser 43332 Nov 15 23:02 SRR098026-backup.fastq
 ~~~
 {: .output}
 
@@ -617,8 +617,8 @@ you will be asked whether you want to override your permission settings.
 > > It's always a good idea to check your work with `ls -l ~/backup`. You should see something like: 
 > > 
 > > ~~~
-> > -r--r--r-- 1 dcuser dcuser 47552 Nov 15 23:06 SRR097977-backup.fastq
-> > -r--r--r-- 1 dcuser dcuser 43332 Nov 15 23:06 SRR098026-backup.fastq
+> > -r-------- 1 dcuser dcuser 47552 Nov 15 23:06 SRR097977-backup.fastq
+> > -r-------- 1 dcuser dcuser 43332 Nov 15 23:06 SRR098026-backup.fastq
 > > ~~~
 > > {: .output}
 > {: .solution}
