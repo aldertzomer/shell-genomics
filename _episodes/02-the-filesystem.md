@@ -239,11 +239,11 @@ You will see something like:
 {: .output}
 
 This is the full name of your home directory. This tells you that you
-are in a directory called `dcuser`, which sits inside a directory called
-`home` which sits inside the very top directory in the hierarchy. The
+are in a directory called `a911934c-xxxx-yyyy-zzzz-03f8500f7007`, which sits inside a directory called
+`projects` which sits inside the very top directory in the hierarchy. The
 very top of the hierarchy is a directory called `/` which is usually
-referred to as the *root directory*. So, to summarize: `dcuser` is a
-directory in `home` which is a directory in `/`. More on `root` and
+referred to as the *root directory*. So, to summarize: `a911934c-xxxx-yyyy-zzzz-03f8500f7007` is a
+directory in `projects` which is a directory in `/`. More on `root` and
 `home` in the next section.
 
 Now enter the following command (substitute the long code after projects/ with your own specific code):
