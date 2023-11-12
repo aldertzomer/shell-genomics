@@ -45,7 +45,7 @@ We'll search for strings inside of our fastq files. Let's first make sure we are
 directory:
 
 ~~~
-$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -512,7 +512,7 @@ foo is abcEFG
 Let's write a for loop to show us the first two lines of the fastq files we downloaded earlier. You will notice the shell prompt changes from `$` to `>` and back again as we were typing in our loop. The second prompt, `>`, is different to remind us that we haven’t finished typing a complete command yet. A semicolon, `;`, can be used to separate two commands written on a single line.
 
 ~~~
-$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/
+$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/
 ~~~
 {: .bash}
 
