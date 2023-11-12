@@ -47,7 +47,7 @@ Let's change our working directory to `shell_data/untrimmed_fastq` using `cd`,
 then run `nano` to create a file called `README.txt` (remember we can only create files in our HOME directory!):
 
 ~~~
-$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 $ nano ~/README.txt
 ~~~
 {: .bash}
