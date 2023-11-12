@@ -29,7 +29,7 @@ you're not already there. Remember to use <tab> completion!
 
 ~~~
 $ cd
-$ cd coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 $ cd untrimmed_fastq
 ~~~
 {: .bash}
@@ -93,7 +93,7 @@ $ ls ../../
 ~~~
 {: .bash}
 
-prints the contents of `~/coursedata/B-MBIMIGE22-23`.
+prints the contents of `~/course_data/B-MBIMIGE22-23`.
 
 > ## Finding hidden directories
 >
@@ -249,7 +249,7 @@ directory in `projects` which is a directory in `/`. More on `root` and
 Now enter the following command (substitute the long code after projects/ with your own specific code):
 
 ~~~
-$ cd /projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/.hidden
+$ cd /projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/.hidden
 ~~~
 {: .bash}
 
@@ -331,7 +331,7 @@ In our case, the `root` directory is __two__ levels above our
 
 ~~~
 $ cd
-$ cd coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 ~~~
 {: .bash}
 
@@ -343,7 +343,7 @@ $ ls ~
 {: .bash}
 
 ~~~
-course_content  coursedata
+course_content  course_data
 ~~~
 {: .output}
 
