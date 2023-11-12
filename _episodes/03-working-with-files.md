@@ -32,7 +32,7 @@ have two results files, which are stored in our `untrimmed_fastq` directory.
 Navigate to your `untrimmed_fastq` directory:
 
 ~~~
-$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -234,7 +234,7 @@ This will print out all of the contents of the `SRR098026.fastq` to the screen.
 > 
 > > ## Solution
 > > 1. The last line of the file is `C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$`.
-> > 2. `cat ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/*`
+> > 2. `cat ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/*`
 > {: .solution}
 {: .challenge}
 
@@ -448,7 +448,7 @@ of those files. In cases like this, it's much faster to do these operations at t
 
 
 ### Please note
-> On our cocalc system all the data provided in `~/coursedata` is READ ONLY. So you cannot delete, copy or create files 
+> On our cocalc system all the data provided in `~/course_data` is READ ONLY. So you cannot delete, copy or create files 
 > and folders there. The only place you can do that is in your home `~` directory! So please prepend your writing actions with `~/`.
 {: .prereq}
 
