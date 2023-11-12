@@ -165,7 +165,7 @@ $ ls
 {: .bash}
 
 ~~~
-course_content  coursedata
+course_content  course_data
 ~~~
 {: .output}
 
@@ -178,20 +178,20 @@ The command to change locations in our file system is `cd`, followed by a
 directory name to change our working directory.
 `cd` stands for "change directory".
 
-Let's say we want to navigate to the `coursedata` directory we saw above.  We can
+Let's say we want to navigate to the `course_data` directory we saw above.  We can
 use the following command to get there:
 
 ~~~
-$ cd coursedata
+$ cd course_data
 ~~~
 {: .bash}
 
-We will now move a few directories deeper (since we are in the cocalc environment all files and folders needed are available from the `~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex` directory. Let us mover there first and then look at what it contains. This directory is READ ONLY so you cannot damage anyones files.  
+We will now move a few directories deeper (since we are in the cocalc environment all files and folders needed are available from the `~/course_data/B-MBIMIGE22-23/intro_genomics_timalex` directory. Let us mover there first and then look at what it contains. This directory is READ ONLY so you cannot damage anyones files.  
   
 Let's move and look at what is in this directory:
 
 ~~~
-$ cd ~/coursedata/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
 $ ls
 ~~~
 {: .bash}
@@ -305,7 +305,7 @@ $ cd coursed<tab>
 The shell will fill in the rest of the directory name for
 `shell_data`. If there are more directories matching the entered text hit <tab><tab> and a list of matches will be shown allowing you to further specify which directory you actually mean.
 
-Now change directories to `untrimmed_fastq` in `coursedata` using tab-completion, we'll have to navigate through 2 additional directories
+Now change directories to `untrimmed_fastq` in `course_data` using tab-completion, we'll have to navigate through 2 additional directories
 
 ~~~
 $ cd B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
