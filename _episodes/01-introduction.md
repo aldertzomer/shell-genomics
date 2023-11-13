@@ -298,11 +298,11 @@ $ cd
 then enter:
 
 ~~~
-$ cd coursed<tab>
+$ cd course_d<tab>
 ~~~
 {: .bash}
 
-The shell will fill in the rest of the directory name for
+Here <tab> means the actual TAB key on your keyboard. The shell will fill in the rest of the directory name for
 `shell_data`. If there are more directories matching the entered text hit <tab><tab> and a list of matches will be shown allowing you to further specify which directory you actually mean.
 
 Now change directories to `untrimmed_fastq` in `course_data` using tab-completion, we'll have to navigate through 2 additional directories
