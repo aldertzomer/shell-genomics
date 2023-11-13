@@ -264,7 +264,7 @@ $ cd
 You can also navigate to the `.hidden` directory using:
 
 ~~~
-$ cd shell_data/.hidden
+$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/.hidden
 ~~~
 {: .bash}
 
