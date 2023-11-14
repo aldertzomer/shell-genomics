@@ -200,7 +200,7 @@ $ wc ~/bad_reads.txt
 {: .bash}
 
 ~~~
-  802    1338   24012 bad_reads.txt
+  537  1073 23217 bad_reads.txt
 ~~~
 {: .output}
 
@@ -213,7 +213,7 @@ $ wc -l ~/bad_reads.txt
 {: .bash}
 
 ~~~
-802 bad_reads.txt
+537 bad_reads.txt
 ~~~
 {: .output}
 
@@ -302,7 +302,7 @@ $ wc -l ~/bad_reads.txt
 {: .bash}
 
 ~~~
-802 bad_reads.txt
+537 bad_reads.txt
 ~~~
 {: .output}
 
@@ -313,7 +313,7 @@ $ wc -l ~/bad_reads.txt
 {: .bash}
 
 ~~~
-802 bad_reads.txt
+537 bad_reads.txt
 ~~~
 {: .output}
 
@@ -328,7 +328,7 @@ $ wc -l ~/bad_reads.txt
 {: .bash}
 
 ~~~
-802 bad_reads.txt
+537 bad_reads.txt
 ~~~
 {: .output}
 
