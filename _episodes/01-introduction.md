@@ -214,14 +214,13 @@ and the <kbd>b</kbd> key to go backwards one page. When you are done reading, hi
 to quit.  
   
 Please note that in the cocalc training environment the manual files have not been included to keep the system as minimal as possible. Usually these manual pages are available in a default unix shell environment. You can find the manual pages on the internet https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html.  
-Alternative many commands give you a shorter explanation by appending ` --help` after the command or if that doesn't work try ` -h` instead. Try it yourself for the `ls` command `ls --help`.  
+Alternative many commands give you a shorter explanation by appending `--help` after the command or if that doesn't work try `-h` instead. Try it yourself for the `ls` command `ls --help`.  
   
 
 > ## Challenge
 > Use the `-l` option for the `ls` command to display more information for each item 
-> in the directory. Since it is used very often most shell environments provide the alias `ll` which stands for `ls -l` which is relative long to type.  
-> What is one piece of additional information this long format
-> gives you that you don't see with the bare `ls` command?
+> in the directory. Since it is used very often most shell environments provide the alias `ll` which stands for `ls -l` which is laborious to type every time.  
+> What is one piece of additional information this long format gives you that you don't see with the bare `ls` command?
 >
 > > ## Solution
 > > ~~~
@@ -243,9 +242,8 @@ Alternative many commands give you a shorter explanation by appending ` --help` 
 > {: .solution}
 {: .challenge}
 
-No one can possibly learn all of these arguments, that's what the manual page
-is for. You can (and should) refer to the manual page or other help files
-as needed.
+No one can possibly learn all of these arguments, that's what the manual page and --help option 
+is for. You can (and should) refer to the manual page or other help files as needed. They can be viewed in the shell but most of the manpages are also available online!
 
 Let's go into the `untrimmed_fastq` directory and see what is in there.
 
