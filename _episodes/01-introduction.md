@@ -213,7 +213,7 @@ file using your keyboard's down arrow or use the <kbd>Space</kbd> key to go forw
 and the <kbd>b</kbd> key to go backwards one page. When you are done reading, hit <kbd>q</kbd>
 to quit.  
   
-Please note that in the cocalc training environment the manual files have not been included to keep the system as minimal as possible. Usually these manual pages are available in a default unix shell environment. You can find the manual pages on the internet https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html.  
+Please note that in the cocalc training environment the manual files have not been included to keep the system as minimal as possible. Usually these manual pages are available in a default unix shell environment. You can find the [manual pages](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html) on the internet.  
 Alternative many commands give you a shorter explanation by appending `&minus&minushelp` after the command or if that doesn't work try `&minush` instead. Try it yourself for the `ls` command: `ls --help`.  
   
 
