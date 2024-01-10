@@ -214,7 +214,7 @@ and the <kbd>b</kbd> key to go backwards one page. When you are done reading, hi
 to quit.  
   
 Please note that in the cocalc training environment the manual files have not been included to keep the system as minimal as possible. Usually these manual pages are available in a default unix shell environment. You can find the manual pages on the internet https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html.  
-Alternative many commands give you a shorter explanation by appending `--help` after the command or if that doesn't work try `-h` instead. Try it yourself for the `ls` command `ls --help`.  
+Alternative many commands give you a shorter explanation by appending `&minus&minushelp` after the command or if that doesn't work try `&minush` instead. Try it yourself for the `ls` command: `ls --help`.  
   
 
 > ## Challenge
