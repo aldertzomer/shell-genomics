@@ -3,14 +3,15 @@ layout: page
 title: Setup
 ---
 
+<br>
 This workshop was designed by datacarpentry to be run on pre-imaged Amazon Web Services 
 (AWS) instances. For information about how to
 use the workshop materials, see the 
 [setup instructions](https://www.datacarpentry.org/genomics-workshop/setup.html) on the main workshop page.
 
-At Utrecht University form 2024 we are using a preconfigured linux server (gemini.science.uu.nl) and have provided required files in 
-- `HOME/course_data` and
-- presentations in `HOME/course_content`
+**At Utrecht University from 2024** we are using a preconfigured linux server (gemini.science.uu.nl) and have provided required files in 
+- `HOME/data` and
+- presentations will be shared using blackboard.
 
 On your **personal machine** you require some software to open/edit files and connect to the gemini server:
 - A spreadsheet program (Excel, [LibreOffice](https://www.libreoffice.org/) (free), or something similar)
