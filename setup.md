@@ -9,16 +9,19 @@ This workshop was designed by datacarpentry to be run on pre-imaged Amazon Web S
 use the workshop materials, see the 
 [setup instructions](https://www.datacarpentry.org/genomics-workshop/setup.html) on the main workshop page.
 
+<br>
 **At Utrecht University from 2024** we are using a preconfigured linux server (gemini.science.uu.nl) and have provided required files in 
 - `HOME/data` and
 - presentations will be shared using blackboard.
 
+<br>
 On your **personal machine** you require some software to open/edit files and connect to the gemini server:
 - A spreadsheet program (Excel, [LibreOffice](https://www.libreoffice.org/) (free), or something similar)
 - A terminal to connect a secure shell. On windows you can use [mobaXterm](https://mobaxterm.mobatek.net/), [putty](https://www.putty.org/), [gitbash](https://git-scm.com/downloads), or the powershell. Mac has its own terminal.
 - A file transfer program using sftp; You can use [WinSCP](https://winscp.net/), [filezilla](https://filezilla-project.org/) or something similar. This is convenient to (re)organise your files oor edit scripts/files in a graphical interface.
 - An advanced text/script editor might be helpfull. On windows [notepad++](https://notepad-plus-plus.org/) is commonly used. Or cross-platform [sublimetext](https://www.sublimetext.com/) or build-in editors.
 
+<br>
 **To connect to the UU gemini server:**
 - Terminal: `ssh your_solisid@gemini.science.uu.nl`
   + Login using your solis credentials
@@ -27,6 +30,7 @@ On your **personal machine** you require some software to open/edit files and co
 
 🟢 At first login you can be prompted for secure shell access (fingerprint). Just accept this after checking that the gemini.science.uu.nl URL is correct.
 
+<br>
 When you login gemini using the terminal and start the course conda environment you should see something similar to below:  
 
 &nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/998ac1d4-2b7a-4fa1-92fe-d17ca938437b)
