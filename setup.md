@@ -24,3 +24,13 @@ On your **personal machine** you require some software to open/edit files and co
   + Setting the (conda) environment command `course B-MBIMIGE`
 - **S**ecure **F**ile **T**ransfer: `sftp gemini.science.uu.nl`
 
+🟢 It first login you can be prompted for allowing the secure shell access (fingerprint). Just accept this after checking that the gemini.science.uu.nl URL is correct.
+
+When you login gemini using the terminal and start the course conda environment you should see something similar to below:
+![image](https://github.com/user-attachments/assets/998ac1d4-2b7a-4fa1-92fe-d17ca938437b)
+
+When you connect using a file browser like WinSCP:
+![image](https://github.com/user-attachments/assets/22971006-a5aa-42b2-a409-99c0c672e1c0)
+
+From there you can also directly open/inspect and edit (script) files...
+![image](https://github.com/user-attachments/assets/5653d067-a6ff-4388-b2b5-03641d41b86b)
