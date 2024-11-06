@@ -13,10 +13,10 @@ At Utrecht University form 2024 we are using a preconfigured linux server (gemin
 - presentations in `HOME/course_content`
 
 On your **personal machine** you require some software to open/edit files and connect to the gemini server:
-- A spreadsheet program (Excel, LibreOffice (free), or something similar)
-- A terminal to connect a secure shell. On windows you can use mobaXterm, putty, gitbash, or the powershell. Mac has its own terminal.
-- A file transfer program using sftp. You can use winSCP, filezilla or something similar. This is convenient to (re)organise your files oor edit scripts/files in a graphical interface.
-- An advanced text/script editor might be helpfull. On windows notepad++ is commonly used. On other platforms sublimetext or build-in editors.
+- A spreadsheet program (Excel, [LibreOffice](https://www.libreoffice.org/) (free), or something similar)
+- A terminal to connect a secure shell. On windows you can use [mobaXterm](https://mobaxterm.mobatek.net/), [putty](https://www.putty.org/), [gitbash](https://git-scm.com/downloads), or the powershell. Mac has its own terminal.
+- A file transfer program using sftp; You can use [WinSCP](https://winscp.net/), [filezilla](https://filezilla-project.org/) or something similar. This is convenient to (re)organise your files oor edit scripts/files in a graphical interface.
+- An advanced text/script editor might be helpfull. On windows [notepad++](https://notepad-plus-plus.org/) is commonly used. Or cross-platform [sublimetext](https://www.sublimetext.com/) or build-in editors.
 
 **To connect to the UU gemini server:**
 - Terminal: `ssh your_solisid@gemini.science.uu.nl`
