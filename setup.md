@@ -24,7 +24,7 @@ On your **personal machine** you require some software to open/edit files and co
   + Setting the (conda) environment command `course B-MBIMIGE`
 - **S**ecure **F**ile **T**ransfer: `sftp gemini.science.uu.nl`
 
-🟢 It first login you can be prompted for allowing the secure shell access (fingerprint). Just accept this after checking that the gemini.science.uu.nl URL is correct.
+🟢 At first login you can be prompted for secure shell access (fingerprint). Just accept this after checking that the gemini.science.uu.nl URL is correct.
 
 When you login gemini using the terminal and start the course conda environment you should see something similar to below:  
 
