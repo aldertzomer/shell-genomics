@@ -51,32 +51,19 @@ In this lesson you will learn how to use the command line interface to move arou
 On a Mac or Linux machine, you can access a shell through a program called "Terminal", which is already available
 on your computer. The Terminal is a window into which we will type commands. If you're using Windows, you'll need to download a separate program to access the shell.
 
-To save time, we are going to be working on a remote server where all the necessary data and software available. When we say a 'remote sever', we are talking about a computer that is not the one you are working on right now. You will access the Carpentries remote server where everything is prepared for the lesson.
-We will learn the basics of the shell by manipulating some data files. Some of these files are very large
-, and would take time to download to your computer.
-We will also be using several bioinformatic packages in later lessons and installing all of the software would take up time even more time. A 'ready-to-go' sever let's us focus on learning. 
+To save time, we are going to be working on a remote server where all the necessary data and software is already available. When we say a 'remote sever', we are talking about a computer that is not the one you are working on right now. You will access the Carpentries remote server where everything is prepared for the lesson.
+We will learn the basics of the shell by manipulating some data files. Some of these files are very large, and would take a long time to download to your computer.
+We will also be using several bioinformatic packages in later lessons and installing all of the software would take up even more time. A 'ready-to-go' sever let's us focus on learning how to use it. 
 
 ## How to access the remote server
 
-You can log-in to the remote server using your webbrowser
-[here instance 4](https://cocalc4.science.uu.nl/) and [here instance 6](https://cocalc6.science.uu.nl/). 
-Your instructor will supply to you the username and password that you need to login.
+From edition 2024 forward at Utrecht University we will use the gemini server for all our remote work. To access this server we need some software like a terminal and a file browser/commander. You can find a detailed guide at this [setup section](https://aldertzomer.github.io/shell-genomics/setup.html) After you installed the required software and connect we end-up in a black box with text where you can issue commands that will run on the server. It will look similar to the example below:
 
-Each of you will have a different username and password. This will 
-prevent us from accidentally changing each other's files as we work through the
-exercises. 
+&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/998ac1d4-2b7a-4fa1-92fe-d17ca938437b)
 
-After logging in and navigating to your project and clicking on "New", "terminal", you will see a screen showing something like this: 
+The welcome text already provides us some server related information. It is important that we activate our (conda) course working environment using the `course B-MBIMIGE` command. The prompt should change (arrow) indicating that the environment is ready!  
 
-![image](https://user-images.githubusercontent.com/10392411/199006892-1f4bcbe9-643c-48bd-b251-df263a8ce753.png)
-
-
-{: .output}
-
-This provides a lot of information about the remote server that you're logging into. We're not going to use most of this information for
-our workshop, so you can clear your screen using the `clear` command. 
-
-Type the word `clear` into the terminal and press the `Enter` key.
+At any time the terminal gets too cluttered, type the word `clear` into the terminal and press the `Enter` key.
 
 ~~~
 $ clear
