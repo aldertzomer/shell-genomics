@@ -33,7 +33,7 @@ On your **personal machine** you require some software to open/edit files and co
 <br>
 When you login gemini using the terminal and start the course conda environment you should see something similar to below:  
 
-&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/998ac1d4-2b7a-4fa1-92fe-d17ca938437b)
+&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/3335aedc-6f22-4b20-93ce-0351f6c3f400)
 
 When you connect using a file browser like WinSCP:  
 
