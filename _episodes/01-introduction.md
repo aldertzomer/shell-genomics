@@ -134,7 +134,7 @@ $ ls
 {: .bash}
 
 ~~~
-course_content  course_data
+data
 ~~~
 {: .output}
 
@@ -151,16 +151,16 @@ Let's say we want to navigate to the `course_data` directory we saw above.  We c
 use the following command to get there:
 
 ~~~
-$ cd course_data
+$ cd data
 ~~~
 {: .bash}
 
-We will now move a few directories deeper (since we are in the cocalc environment all files and folders needed are available from the `~/course_data/B-MBIMIGE22-23/intro_genomics_timalex` directory. Let us mover there first and then look at what it contains. This directory is READ ONLY so you cannot damage anyones files.  
+We will now move a few directories deeper (since we are in a linux environment all files and folders needed are available from the `~/data/DataCarpentry` directory. Let us mover there first and then look at what it contains. This directory is READ ONLY so you cannot damage anyones files.  
   
 Let's move and look at what is in this directory:
 
 ~~~
-$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ cd ~/data/DataCarpentry/shell_data
 $ ls
 ~~~
 {: .bash}
@@ -186,6 +186,8 @@ sra_metadata/  untrimmed_fastq/
 Anything with a "/" after it is a directory. Things with a "*" after them are programs. If
 there are no decorations, it's a file.
 
+Another useful option is --color. The command `ls --color` will show the same but now using colors to discriminate between folders, executable files/programs or regular files. In many linux environments (for instance those based on debian/Ubuntu) the coloring is the default (also for our server we currently work on it might be that we already enabled this by default).
+
 `ls` has lots of other options. To find out what they are, we can type:
 
 ~~~
@@ -200,9 +202,8 @@ file using your keyboard's down arrow or use the <kbd>Space</kbd> key to go forw
 and the <kbd>b</kbd> key to go backwards one page. When you are done reading, hit <kbd>q</kbd>
 to quit.  
   
-Please note that in the cocalc training environment the manual files have not been included to keep the system as minimal as possible. Usually these manual pages are available in a default unix shell environment. You can find the [manual pages](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html) on the internet.  
 Alternative many commands give you a shorter explanation by appending &minus;&minus;help after the command or if that doesn't work try &minus;h instead. Try it yourself for the `ls` command: `ls --help`.  
-  
+
 
 > ## Challenge
 > Use the `-l` option for the `ls` command to display more information for each item 
@@ -265,17 +266,17 @@ $ cd
 then enter:
 
 ~~~
-$ cd course_d<tab>
+$ cd da<tab>
 ~~~
 {: .bash}
 
 Here `<tab>` means the actual TAB key on your keyboard. The shell will fill in the rest of the directory name for
-`shell_data`. If there are more directories matching the entered text hit <tab><tab> and a list of matches will be shown allowing you to further specify which directory you actually mean.
+`shell_data`. If there are more directories or files matching the entered text hit `<tab><tab>` and a list of matches will be shown allowing you to further specify which directory you actually mean y adding additional characers and hit `<tab>` again.
 
-Now change directories to `untrimmed_fastq` in `course_data` using tab-completion, we'll have to navigate through 2 additional directories
+Now change directories to `untrimmed_fastq` in `data` using tab-completion, we'll have to navigate through 2 additional directories
 
 ~~~
-$ cd B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/data/DataCarpentry/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
