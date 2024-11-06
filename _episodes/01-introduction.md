@@ -270,8 +270,8 @@ $ cd da<tab>
 ~~~
 {: .bash}
 
-Here `<tab>` means the actual TAB key on your keyboard. The shell will fill in the rest of the directory name for
-`shell_data`. If there are more directories or files matching the entered text hit `<tab><tab>` and a list of matches will be shown allowing you to further specify which directory you actually mean y adding additional characers and hit `<tab>` again.
+Here `<tab>` means the actual TAB key (<kbd>Tab</kbd>) on your keyboard. The shell will fill in the rest of the directory name for
+`shell_data`. If there are more directories or files matching the entered text hit <kbd>Tab</kbd><kbd>Tab</kbd> and a list of matches will be shown allowing you to further specify which directory you actually mean y adding additional characers and hit <kbd>Tab</kbd> again.
 
 Now change directories to `untrimmed_fastq` in `data` using tab-completion, we'll have to navigate through 2 additional directories
 
