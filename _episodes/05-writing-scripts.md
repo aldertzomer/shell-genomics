@@ -316,38 +316,15 @@ command line belongs to. So, if you are logged into AWS on the command line and 
 the ``curl`` command above in the AWS terminal, the file will be downloaded to your AWS
 machine, not your local one.
 
-### Moving files between your laptop and your instance
+### Moving files between your laptop and the server
 
-Normally we would use SCP to transfer files between your laptop and the Linux machine, however we are now going to use the webbrowser:
+There are several ways to get and upload files between your local computer and the server. We'll use the filet transfer programs for that (see stup). Typically this is WinSCP or filezilla.
 
 ## Transferring Data Between your Local Machine and the Cloud
 
-Press File, Upload
+Download the bad reads file in ~/scripted_bad_reads.txt to your home local Download directory using the file transfer program.
 
-![image](https://user-images.githubusercontent.com/10392411/199008431-6947dce5-7482-45c4-a9eb-57fac281cc1e.png)
-
-and then Upload at the right
-
-![image](https://user-images.githubusercontent.com/10392411/199008668-fffc1285-f4ae-4a02-91f8-541fb3d87e7d.png)
-
-
-#### Downloading Data from your Virtual Machine with scp
-
-Let's download a text file from our remote machine. You should have a file that contains bad reads called ~/scripted_bad_reads.txt.
-
-**Tip:** If you are looking for another (or any really) text file in your home directory to use instead, try:
-
-~~~
-$ find ~ -name *.txt
-~~~
-{: .bash}
-
-
-Download the bad reads file in ~/scripted_bad_reads.txt to your home local Download directory using the webbrowser
-
-Select the file, press download. In this example another file is selected:
-
-![image](https://user-images.githubusercontent.com/10392411/199009136-3cfc3cfa-091e-4336-b5b6-1dbdd67f2852.png)
+In the same way you can upload (or directly edit) your files.
 
 <div id="div_win" style="display:block" markdown="1">
 
