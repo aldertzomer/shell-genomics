@@ -63,7 +63,7 @@ $ pwd
 You should see output similar to below: 
 
 ~~~
-/projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007  
+/nethome/your_solis_id  
 ~~~
 {: .output}
 
