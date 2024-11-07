@@ -316,15 +316,14 @@ command line belongs to. So, if you are logged into AWS on the command line and 
 the ``curl`` command above in the AWS terminal, the file will be downloaded to your AWS
 machine, not your local one.
 
-### Moving files between your laptop and the server
+
+### Transferring Data Between the server and your Local Machine
 
 There are several ways to get and upload files between your local computer and the server. We'll use the filet transfer programs for that (see stup). Typically this is WinSCP or filezilla.
 
-## Transferring Data Between your Local Machine and the Cloud
-
-Download the bad reads file in ~/scripted_bad_reads.txt to your home local Download directory using the file transfer program.
-
+Now download the bad reads file in ~/scripted_bad_reads.txt to your home local Download directory using the file transfer program.
 In the same way you can upload (or directly edit) your files.
+<br>
 
 <div id="div_win" style="display:block" markdown="1">
 
