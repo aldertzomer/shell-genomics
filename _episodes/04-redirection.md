@@ -26,8 +26,8 @@ We discussed in a previous episode how to search within a file using `less`. We 
 search within files without even opening them, using `grep`. `grep` is a command-line
 utility for searching plain-text files for lines matching a specific set of 
 characters (sometimes called a string) or a particular pattern 
-(which can be specified using something called regular expressions). We're not going to work with 
-regular expressions in this lesson, and are instead going to specify the strings 
+(which can be specified using something called *regular expressions*). We're not going to work with 
+regular expressions in this lesson and if you want to learn more check-out the [extras material](https://ryanstutorials.net/linuxtutorial/grep.php). We are now going to specify the specific strings 
 we are searching for.
 Let's give it a try!
 
@@ -45,7 +45,7 @@ We'll search for strings inside of our fastq files. Let's first make sure we are
 directory:
 
 ~~~
-$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/data/DataCarpentry/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -512,7 +512,7 @@ foo is abcEFG
 Let's write a for loop to show us the first two lines of the fastq files we downloaded earlier. You will notice the shell prompt changes from `$` to `>` and back again as we were typing in our loop. The second prompt, `>`, is different to remind us that we haven’t finished typing a complete command yet. A semicolon, `;`, can be used to separate two commands written on a single line.
 
 ~~~
-$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/
+$ cd ~/data/DataCarpentry/shell_data/untrimmed_fastq/
 ~~~
 {: .bash}
 
