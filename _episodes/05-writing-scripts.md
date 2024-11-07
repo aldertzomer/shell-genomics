@@ -47,7 +47,7 @@ Let's change our working directory to `shell_data/untrimmed_fastq` using `cd`,
 then run `nano` to create a file called `README.txt` (remember we can only create files in our HOME directory!):
 
 ~~~
-$ cd ~/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/data/DataCarpentry/shell_data/untrimmed_fastq
 $ nano ~/README.txt
 ~~~
 {: .bash}
@@ -196,7 +196,7 @@ $ ls -l ~/bad-reads-script.sh
 ~~~
 {: .output}
 
-We see that it says `-rw-r--r--`. This shows that the file can be read by any user and written to by the file owner (you). We want to change these permissions so that the file can be executed as a program. We use the command `chmod` like we did earlier when we removed write permissions. Here we are adding (`+`) executable permissions (`+x`).
+We see that it says `-rw-r--r--`. This shows that the file can be read by any user and written to by the file owner (you). We want to change these permissions so that the file can be executed as a program. We use the command `chmod` like we did earlier when we removed write permissions. Here we are adding (`+`) executable permissions (`+x`). It is **good practise** to just change the rights for the **current user (u)** unless you want to set specific group (g) or world (o) permissions.
 
 ~~~
 $ chmod u+x ~/bad-reads-script.sh
