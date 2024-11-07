@@ -29,7 +29,7 @@ you're not already there. Remember to use <tab> completion!
 
 ~~~
 $ cd
-$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ cd ~/data/DataCarpentry/shell_data
 $ cd untrimmed_fastq
 ~~~
 {: .bash}
@@ -70,7 +70,7 @@ $ pwd
 Returns something similar ot below:
   
 ~~~
-/projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+/nethome/your_solis_id/data/DataCarpentry/shell_data
 ~~~
 {: .output}
 
@@ -93,7 +93,7 @@ $ ls ../../
 ~~~
 {: .bash}
 
-prints the contents of `~/course_data/B-MBIMIGE22-23`.
+prints the contents of `~/data`.
 
 > ## Finding hidden directories
 >
@@ -170,7 +170,7 @@ $ cd
 Then enter the command:
 
 ~~~
-$ ls course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ ls ~/data/DataCarpentry/shell_data
 ~~~
 {: .bash}
 
@@ -188,7 +188,7 @@ Try entering:
 
 ~~~
 $ cd
-$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq
+$ cd ~/data/DataCarpentry/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -204,7 +204,7 @@ the intermediate directory.
 > >
 > > ~~~
 > > $ cd
-> > $ ls course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/untrimmed_fastq/
+> > $ ls ~/data/DataCarpentry/shell_data/untrimmed_fastq/
 > > ~~~
 > > {: .bash}
 > > 
@@ -234,27 +234,27 @@ $ pwd
 You will see something like: 
 
 ~~~
-/projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007
+/nethome/your_solis_id
 ~~~
 {: .output}
 
 This is the full name of your home directory. This tells you that you
-are in a directory called `a911934c-xxxx-yyyy-zzzz-03f8500f7007`, which sits inside a directory called
-`projects` which sits inside the very top directory in the hierarchy. The
+are in a directory called `your_solis_id`, which sits inside a directory called
+`nethome` which sits inside the very top directory in the hierarchy. The
 very top of the hierarchy is a directory called `/` which is usually
-referred to as the *root directory*. So, to summarize: `a911934c-xxxx-yyyy-zzzz-03f8500f7007` is a
-directory in `projects` which is a directory in `/`. More on `root` and
+referred to as the *root directory*. So, to summarize: `your_solis_id` is a
+directory in `nethome` which is a directory in `/`. More on `root` and
 `home` in the next section.
 
 Now enter the following command (substitute the long code after projects/ with your own specific code):
 
 ~~~
-$ cd /projects/a911934c-xxxx-yyyy-zzzz-03f8500f7007/course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/.hidden
+$ cd /nethome/your_solis_id/data/DataCarpentry/shell_data/.hidden
 ~~~
 {: .bash}
 
 This jumps forward multiple levels to the `.hidden` directory. 
-Now go back to the home directory. 
+Now go back to the home (~) directory. 
 
 ~~~
 $ cd
@@ -264,7 +264,7 @@ $ cd
 You can also navigate to the `.hidden` directory using:
 
 ~~~
-$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data/.hidden
+$ cd ~/data/DataCarpentry/shell_data/.hidden
 ~~~
 {: .bash}
 
@@ -325,13 +325,13 @@ not discussed here, so it’s best to avoid them and work within your
 home directory. Dealing with the `home` directory is very common.
 The tilde character, `~`, is a shortcut for your home directory.
 In our case, the `root` directory is __two__ levels above our
-`home` directory, so `cd` or `cd ~` will take you to
-`/home/dcuser` and `cd /` will take you to `/`. Navigate to the
+`home` directory, so `cd` or **`cd ~`** will take you to
+`/home/your_solis_id` and `cd /` will take you to `/`. Navigate to the
 `shell_data` directory:
 
 ~~~
 $ cd
-$ cd course_data/B-MBIMIGE22-23/intro_genomics_timalex/shell_data
+$ cd ~/data/DataCarpentry/shell_data
 ~~~
 {: .bash}
 
@@ -343,7 +343,7 @@ $ ls ~
 {: .bash}
 
 ~~~
-course_content  course_data
+data
 ~~~
 {: .output}
 
