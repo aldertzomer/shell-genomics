@@ -183,8 +183,13 @@ $ history | tail -n 7
 > {: .solution}
 {: .challenge}
 
-You may have noticed that your history contains the `history` command itself. To remove this redundancy
-from our log, let's use the `nano` text editor to fix the file:  
+There are however still 2 issues with the file we created!
+- It still contains line numbers (some unix variants) which cannot be executed.
+- It still contains the history command as well.
+
+We can fix this manually using nano and remove the line numbers and the line that contains `history`.
+After tomorrows class youcan also fix the line number issue by additionally using `cut -c 8-`.
+Let's use the `nano` text editor to fix the file:  
 
 ~~~
 $ nano dc_workshop_log_2017_10_27.sh
