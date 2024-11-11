@@ -112,7 +112,7 @@ i.e.,
 the directory that the computer assumes we want to run commands in,
 unless we explicitly specify something else.
 Here,
-the computer's response is similar to `/projects/a911934c-9abf-4038-97ef-03f8500f7007`,
+the computer's response is similar to `/nethome/solisid`,
 which is the top level directory within our cloud system:
 
 ~~~
@@ -121,7 +121,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/projects/7b65ee5d-xxxx-yyyy-zzzz-6d894eca83b8
+/nethome/solisid
 ~~~
 {: .output}
 
@@ -147,7 +147,7 @@ The command to change locations in our file system is `cd`, followed by a
 directory name to change our working directory.
 `cd` stands for "change directory".
 
-Let's say we want to navigate to the `course_data` directory we saw above.  We can
+Let's say we want to navigate to the `data` directory we saw above.  We can
 use the following command to get there:
 
 ~~~
