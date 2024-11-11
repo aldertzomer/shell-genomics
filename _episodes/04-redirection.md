@@ -422,7 +422,7 @@ To fix this issue, we can redirect the output of grep to a second instance of `g
 
 ~~~
 $ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq | grep -v '^--' > ~/bad_reads.fastq
-tail ~/bad_reads.fastq
+$ tail ~/bad_reads.fastq
 ~~~
 {: .bash}
 
@@ -444,6 +444,8 @@ The `-v` option in the second `grep` search stands for `--invert-match` meaning 
 lines which do not match the searched pattern, in this case `'^--'`. The caret (`^`) is an **anchoring** 
 character matching the beginning of the line, and the pattern has to be enclose by single quotes so `grep` does 
 not interpret the pattern as an extended option (starting with --).
+
+Furthermore we can now **output to a file with extension .fastq** since the output is again a proper fastq formatted file!
 
 > ## Custom `grep` control
 > 
